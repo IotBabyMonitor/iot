@@ -37,10 +37,10 @@ def sound():
     while True:
         sound = db.child("Sound Detection/detected").get()    
         if (sound.val()=="yes"):
+            #time.sleep(5)
             sendNotification(
             "ابنك بيعيط ياختي",
             "روحي نيمي ابنك يا وليه!")
-            time.sleep(5)
             db.child("Sound Detection/detected").set("no")
         
         
